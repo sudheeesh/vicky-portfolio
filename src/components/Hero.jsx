@@ -49,7 +49,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-black mb-6 tracking-tighter"
+          className="text-5xl sm:text-6xl md:text-8xl font-black mb-6 tracking-tighter"
         >
           <span className="text-white">VIGNESH </span>
           <span className="text-gradient">N</span>
@@ -59,7 +59,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-2xl md:text-4xl font-light text-text-primary mb-8"
+          className="text-xl sm:text-2xl md:text-4xl font-light text-text-primary mb-8"
         >
           Digital Marketing Specialist
         </motion.h2>

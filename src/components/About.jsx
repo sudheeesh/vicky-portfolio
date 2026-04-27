@@ -38,20 +38,20 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-card p-8 text-center flex flex-col justify-center items-center group hover:border-accent-1/50 transition-colors"
+                className="glass-card p-6 md:p-8 text-center flex flex-col justify-center items-center group hover:border-accent-1/50 transition-colors"
               >
-                <div className="text-5xl font-black text-white mb-2 group-hover:text-accent-2 transition-colors flex items-center">
+                <div className="text-4xl sm:text-5xl font-black text-white mb-2 group-hover:text-accent-2 transition-colors flex items-center">
                   {stat.value}
                   <span className="text-accent-1">{stat.suffix}</span>
                 </div>
-                <div className="text-sm text-text-secondary font-medium uppercase tracking-wider">
+                <div className="text-xs sm:text-sm text-text-secondary font-medium uppercase tracking-wider">
                   {stat.label}
                 </div>
               </motion.div>

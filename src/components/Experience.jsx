@@ -47,7 +47,7 @@ const ExperienceCard = ({ exp, index }) => {
     <div className={`relative flex items-center justify-between md:justify-normal w-full mb-16 ${isEven ? 'md:flex-row-reverse' : ''}`} ref={ref}>
 
       {/* Timeline Dot */}
-      <div className="absolute left-0 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary-bg border-4 border-accent-1 z-10 flex items-center justify-center">
+      <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary-bg border-4 border-accent-1 z-10 flex items-center justify-center">
         <div className="w-2 h-2 rounded-full bg-accent-2" />
       </div>
 
@@ -56,7 +56,7 @@ const ExperienceCard = ({ exp, index }) => {
         initial={{ opacity: 0, x: isEven ? 50 : -50 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="w-full pl-12 md:pl-0 md:w-5/12 glass-card p-6 relative group"
+        className="w-full pl-16 md:pl-0 md:w-5/12 glass-card p-6 relative group"
       >
         <div className={`hidden md:block absolute top-6 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent ${isEven ? 'border-r-[15px] border-r-white/10 -left-[15px]' : 'border-l-[15px] border-l-white/10 -right-[15px]'}`} />
 
@@ -64,8 +64,8 @@ const ExperienceCard = ({ exp, index }) => {
           <FiBriefcase />
           <span className="text-sm font-bold uppercase tracking-wider">{exp.period}</span>
         </div>
-        <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
-        <h4 className="text-lg text-accent-2 mb-4">{exp.company}</h4>
+        <h3 className="text-xl md:text-2xl font-bold text-white mb-1">{exp.role}</h3>
+        <h4 className="text-base md:text-lg text-accent-2 mb-4">{exp.company}</h4>
 
         <ul className="space-y-2">
           {exp.description.map((item, i) => (
@@ -98,7 +98,7 @@ const Experience = () => {
 
         <div className="relative">
           {/* Central Line */}
-          <div className="absolute left-0 md:left-1/2 -translate-x-px w-0.5 h-full bg-gradient-to-b from-accent-1/50 via-accent-2/50 to-transparent" />
+          <div className="absolute left-4 md:left-1/2 -translate-x-px w-0.5 h-full bg-gradient-to-b from-accent-1/50 via-accent-2/50 to-transparent" />
 
           {experiences.map((exp, index) => (
             <ExperienceCard key={index} exp={exp} index={index} />

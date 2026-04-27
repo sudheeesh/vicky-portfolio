@@ -9,11 +9,11 @@ const Contact = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setStatus("Sending...");
-    
+
     const formData = new FormData(event.target);
-    
+
     // Web3Forms Access Key - Get yours for free at https://web3forms.com/
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "6f10a364-9899-4a69-98ce-b0a5d52da9fb");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -147,7 +147,7 @@ const Contact = () => {
               <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2 py-4">
                 <FiSend /> {status === "Sending..." ? "Sending..." : "Send Message"}
               </button>
-              
+
               {status && status !== "Sending..." && (
                 <p className={`mt-4 text-center font-medium ${status.includes("Successfully") ? "text-green-400" : "text-red-400"}`}>
                   {status}
